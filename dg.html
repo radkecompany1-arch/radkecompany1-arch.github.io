@@ -264,7 +264,7 @@ try{if(!localStorage.getItem("bf-access"))location.replace("index.html")}catch(e
 
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const DESTS=[["SYD","Sydney"],["EJS","Sydney · EJS"],["MEL","Melbourne"],["ADL","Adelaide"],["PER","Perth"],["DRW","Darwin"],["HBA","Hobart"],["CBR","Canberra"]];
+const DESTS=[["NTH","North (North QLD)"],["SYD","Sydney"],["EJS","Sydney · EJS"],["MEL","Melbourne"],["ADL","Adelaide"],["PER","Perth"],["DRW","Darwin"],["HBA","Hobart"],["CBR","Canberra"]];
 /* set-ups: key, name, sub-label, trailers front to back */
 const COMBOS=[["A","A trailer","",["A"]],["B","B trailer","",["B"]],["AB","A + B","B-double",["A","B"]],["AA","A + A","",["A","A"]],["AAB","A + A + B","Triple",["A","A","B"]],["FA","Flat A","No drop, no mezz",["FA"]],["FB","Flat B","No drop, no mezz",["FB"]],["FAB","Flat A + B","Flat B-double",["FA","FB"]]];
 const TNAME={A:"A trailer",B:"B trailer",FA:"Flat A trailer",FB:"Flat B trailer"};
