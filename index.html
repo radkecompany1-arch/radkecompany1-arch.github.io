@@ -282,6 +282,21 @@ html.kiosk #snd,html.kiosk #hmBtn,html.kiosk #acBtn,html.kiosk .toolbar{display:
   .pnum{font:900 26px/1 var(--display);text-align:center;border-bottom:1px solid #000;padding-bottom:2px;margin-bottom:3px}
   .psub{font:700 11.5px/1.3 var(--cond);text-align:center}
 }
+/* welcome splash */
+html.welc body{overflow:hidden}
+.welcome{position:fixed;inset:0;z-index:95;background:var(--bg);display:grid;place-items:center;padding:24px;transition:opacity .35s}
+.welcome.open{opacity:0;pointer-events:none}
+.win{width:min(440px,100%)}
+.win h1{font:900 44px/1 var(--display);margin:22px 0 4px;letter-spacing:.02em}
+.win>p{margin:0 0 18px;color:var(--muted);font-size:17px}
+.wcard{display:flex;align-items:center;gap:14px;width:100%;text-align:left;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 16px;margin-top:12px;cursor:pointer;position:relative;overflow:hidden;transition:transform .12s,box-shadow .2s}
+.wcard::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px}
+#wPost::before{background:var(--vis)}#wDG::before{background:repeating-linear-gradient(-45deg,#F59E0B 0 8px,var(--ink) 8px 16px)}
+.wcard:hover{box-shadow:0 10px 26px -12px var(--glow)}.wcard:active{transform:scale(.985)}
+.wic{flex:none;width:56px;height:56px;border-radius:14px;display:grid;place-items:center;background:var(--sign)}
+.wic svg{width:28px;height:28px}.wic.pc{color:var(--vis)}.wic.dg{color:#F59E0B}
+.wt{flex:1;min-width:0}.wt b{display:block;font:900 26px/1 var(--display);letter-spacing:.02em}.wt small{display:block;color:var(--muted);font-size:14px;margin-top:4px}
+.wgo{flex:none;font:900 34px/1 var(--display);color:var(--muted)}
 /* access gate */
 html.gated body>*:not(.gate){visibility:hidden}
 .gate{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center;padding:24px;transition:opacity .35s}
@@ -316,6 +331,15 @@ html.gated body>*:not(.gate){visibility:hidden}
 </style>
 </head>
 <body>
+<div class="welcome" id="welcome" hidden>
+  <div class="win">
+    <div class="gbrand"><i></i><div><div class="co"><span class="cx">XFM</span></div><div class="tool">Brisbane QLD depot</div></div></div>
+    <h1 id="wHi">Welcome</h1>
+    <p>What do you need?</p>
+    <button class="wcard" id="wPost" type="button"><span class="wic pc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></span><span class="wt"><b>Postcode Finder</b><small>Find the bay for a suburb or postcode</small></span><span class="wgo">›</span></button>
+    <a class="wcard" id="wDG" href="dg.html"><span class="wic dg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 12l10 9 10-9z"/><path d="M12 9v4M12 16h.01"/></svg></span><span class="wt"><b>DG Trailer Plan</b><small>Mark where the DGs are on your trailer</small></span><span class="wgo">›</span></a>
+  </div>
+</div>
 <div class="gate" id="gate" hidden>
   <div class="gbox" role="dialog" aria-modal="true" aria-labelledby="gateT">
     <div class="gbrand"><i></i><div><div class="co"><span class="cx">XFM</span></div><div class="tool">Postcode Database</div></div></div>
@@ -346,6 +370,7 @@ html.gated body>*:not(.gate){visibility:hidden}
   </header>
   <div class="toolbar">
     <button class="tpill" id="hmBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 4 5 5-9.5 9.5-5.5 1 1-5.5z"/><path d="M13 6l5 5"/></svg>Marking Tool<svg class="lk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></button>
+    <a class="tpill" id="dgBtn" href="dg.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 12l10 9 10-9z"/><path d="M12 9v4M12 16h.01"/></svg>DG Trailer Plan</a>
     <button class="tpill" id="acBtn" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg><span>Auto-clear off</span></button>
   </div>
 
@@ -421,17 +446,29 @@ async function openChart(code){
 (async function boot(){
   const gate=document.getElementById("gate"),inp=document.getElementById("gateCode"),err=document.getElementById("gateErr"),btn=document.getElementById("gateGo");
   let saved=null;try{saved=localStorage.getItem(AK)}catch(e){}
-  if(saved){try{const raw=await openChart(saved);gate.remove();startApp(raw);return}catch(e){err.textContent="The access code has changed. Enter the new one.";try{localStorage.removeItem(AK)}catch(e){}}}
+  if(saved){try{const raw=await openChart(saved);gate.remove();startApp(raw);showWelcome();return}catch(e){err.textContent="The access code has changed. Enter the new one.";try{localStorage.removeItem(AK)}catch(e){}}}
   gate.hidden=false;document.documentElement.classList.add("gated");setTimeout(()=>inp.focus(),50);
   async function tryIt(){
     const v=inp.value.trim();if(!v)return;btn.disabled=true;btn.textContent="Checking…";err.textContent="";
     try{const raw=await openChart(v);try{localStorage.setItem(AK,v.toUpperCase().replace(/\s+/g,""))}catch(e){}
-      gate.classList.add("open");document.documentElement.classList.remove("gated");setTimeout(()=>gate.remove(),400);startApp(raw)}
+      gate.classList.add("open");document.documentElement.classList.remove("gated");setTimeout(()=>gate.remove(),400);startApp(raw);showWelcome()}
     catch(e){err.textContent="That code isn’t right. Check with Kurt for the XFM access code.";inp.select();const b=gate.querySelector(".gbox");b.classList.remove("shake");void b.offsetWidth;b.classList.add("shake");try{navigator.vibrate&&navigator.vibrate([40,40,40])}catch(e){}}
     btn.disabled=false;btn.textContent="Unlock";
   }
   btn.onclick=tryIt;inp.addEventListener("keydown",e=>{if(e.key==="Enter")tryIt()});
 })();
+/* welcome splash after login: pick a tool (skipped on a locked shared screen) */
+function showWelcome(){
+  let kiosk=false;try{kiosk=localStorage.getItem("bf-kiosk")==="1"}catch(e){}
+  if(kiosk)return;
+  const w=document.getElementById("welcome");
+  const hr=+new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Brisbane",hour:"numeric",hour12:false}).format(new Date());
+  document.getElementById("wHi").textContent=hr<12?"Good morning":hr<17?"Good afternoon":"Good evening";
+  w.hidden=false;document.documentElement.classList.add("welc");
+  const close=()=>{w.classList.add("open");document.documentElement.classList.remove("welc");setTimeout(()=>{w.hidden=true;w.classList.remove("open")},350);const q=document.getElementById("q");if(q&&!matchMedia("(pointer:coarse)").matches)q.focus()};
+  document.getElementById("wPost").onclick=close;
+  document.getElementById("wDG").addEventListener("click",()=>{});
+}
 function startApp(RAW){
 
 const ORIGINAL=RAW.split(";").map(s=>{const [suburb,postcode,bay]=s.split("|");return [suburb,postcode,+bay]});

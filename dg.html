@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>XFM DG Trailer Plan | Brisbane</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#E9ECEE; --bg2:#DCE1E4; --surface:#FFFFFF; --ink:#161819; --muted:#5B6266; --line:#C8CFD3;
+  --vis:#00C1DE; --vis-ink:#161819; --glow:rgba(0,193,222,.45); --warn:#F59E0B; --bad:#C2410C; --ok:#1F9D55;
+  --deck:#C9CFD3; --deck2:#B8BFC4; --sign:#0D1012;
+  --display:"Big Shoulders Display","Oswald","Arial Narrow",Impact,sans-serif;
+  --cond:"Barlow Condensed","Arial Narrow","Roboto Condensed",sans-serif;
+  --body:"Barlow","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1214;--bg2:#171B1E;--surface:#1C2124;--ink:#EEF2F3;--muted:#9AA3A8;--line:#2C3338;--deck:#2A3136;--deck2:#232A2E;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1214;--bg2:#171B1E;--surface:#1C2124;--ink:#EEF2F3;--muted:#9AA3A8;--line:#2C3338;--deck:#2A3136;--deck2:#232A2E;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.4;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--vis);outline-offset:2px}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px 60px}
+html.desk .wrap{max-width:1100px;padding:0 28px 60px}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 2px 0}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand i{flex:none;width:10px;align-self:stretch;border-radius:3px;background:repeating-linear-gradient(-45deg,var(--vis) 0 6px,var(--ink) 6px 12px)}
+.co{font:900 26px/1 var(--display);letter-spacing:.02em;color:var(--vis);text-shadow:0 0 12px var(--glow)}
+.tool{font:800 clamp(13px,3.9vw,17px)/1 var(--cond);letter-spacing:.06em;text-transform:uppercase;margin-top:4px;white-space:nowrap}
+.depot{font-size:13px;font-weight:600;color:var(--muted);margin-top:3px;line-height:1.25}.depot b{color:var(--ink)}
+.clock{white-space:nowrap;text-align:right;line-height:1.15;font-variant-numeric:tabular-nums}
+.clock #ctime{display:block;font-size:15px;font-weight:700}.clock #cdate{display:block;font-size:12px;color:var(--muted);font-weight:500}
+html.desk .co{font-size:34px}html.desk .tool{font-size:16px;letter-spacing:.18em}
+
+h2{font:900 26px var(--display);letter-spacing:.03em;margin:22px 2px 10px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;margin-top:12px;position:relative;overflow:hidden}
+.card.sign::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:repeating-linear-gradient(-45deg,var(--vis) 0 10px,var(--ink) 10px 20px)}
+.card.sign{padding-top:24px}
+label.f{display:block;font:800 13px var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:14px 2px 6px}
+label.f:first-of-type{margin-top:0}
+.route{display:flex;align-items:center;gap:10px}
+.from{flex:none;font:900 28px/1 var(--display);background:var(--sign);color:var(--vis);border-radius:10px;padding:12px 12px 10px;text-shadow:0 0 8px var(--glow);letter-spacing:.04em}
+.arrow{flex:none;font:900 24px var(--display);color:var(--muted)}
+select{width:100%;appearance:none;-webkit-appearance:none;border:3px solid var(--ink);border-radius:12px;background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235B6266' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center/22px;padding:13px 44px 13px 14px;font:800 22px/1.1 var(--cond);text-transform:uppercase;letter-spacing:.02em;cursor:pointer}
+select:focus{outline:none;box-shadow:0 0 0 4px var(--vis)}
+.row2{display:grid;grid-template-columns:1fr 1.25fr;gap:10px}
+.row2 select{font-size:19px;padding-right:38px}
+.combos{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
+.combo{border:2px solid var(--line);background:var(--bg);border-radius:12px;padding:10px 10px 9px;cursor:pointer;text-align:left}
+.combo[aria-pressed="true"]{border-color:var(--vis);box-shadow:0 0 0 3px var(--glow);background:var(--surface)}
+.combo b{display:block;font:800 18px/1.1 var(--cond);text-transform:uppercase}
+.combo small{display:block;color:var(--muted);font-size:13px}
+.mini{display:flex;align-items:center;gap:3px;margin-bottom:8px;height:16px}
+.mini .pm{width:14px;height:14px;border-radius:3px 6px 3px 3px;background:var(--ink)}
+.mini .tr{height:12px;border-radius:2px;background:var(--vis)}
+.mini .tr.a{width:34px}.mini .tr.b{width:30px;background:#0090A8}.mini .tr.fa{width:34px;background:var(--muted)}.mini .tr.fb{width:30px;background:var(--muted);opacity:.75}
+.go{width:100%;border:0;border-radius:14px;background:var(--vis);color:var(--vis-ink);font:800 19px var(--body);padding:16px;cursor:pointer;margin-top:16px;box-shadow:0 8px 22px -10px var(--glow)}
+.recent{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.rp{display:flex;align-items:center;gap:12px;width:100%;text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 12px;cursor:pointer}
+.rp .badge{flex:none;min-width:56px;text-align:center;font:900 22px/1 var(--display);padding:8px;border-radius:8px;background:var(--sign);color:var(--vis);text-shadow:0 0 8px var(--glow)}
+.rp .n{flex:1;min-width:0}.rp .n b{display:block;font:800 18px/1.1 var(--cond);text-transform:uppercase}.rp .n small{color:var(--muted);font-size:13px}
+.dgc{flex:none;font:800 13px var(--cond);background:var(--bg2);border-radius:99px;padding:4px 9px;white-space:nowrap}
+.note{color:var(--muted);font-size:14px;margin:6px 2px}
+
+/* plan */
+.planbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:12px 0 10px;display:flex;align-items:center;gap:10px}
+.back{flex:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;cursor:pointer}
+.back svg{width:20px;height:20px}
+.ptitle{flex:1;min-width:0}
+.ptitle b{display:block;font:900 26px/1 var(--display);letter-spacing:.02em}
+.ptitle small{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+.pbtn{flex:none;border:0;border-radius:12px;background:var(--sign);color:var(--vis);font:800 15px var(--body);padding:12px 14px;cursor:pointer;display:flex;align-items:center;gap:6px}
+.pbtn svg{width:18px;height:18px}
+.pbtn:disabled{opacity:.7}
+.spin{width:16px;height:16px;border:3px solid currentColor;border-right-color:transparent;border-radius:50%;display:inline-block;animation:sp .7s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}
+.legendrow{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--muted);margin:2px 2px 8px}
+.rig{display:flex;flex-direction:column;align-items:center;gap:0}
+html.desk .planwrap{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px;align-items:start}
+.cab{width:150px;height:56px;border-radius:22px 22px 8px 8px;background:var(--sign);position:relative;display:grid;place-items:center;color:var(--vis);font:800 13px var(--cond);letter-spacing:.2em}
+.cab::before{content:"";position:absolute;left:18px;right:18px;top:10px;height:14px;border-radius:6px;background:rgba(0,193,222,.25)}
+.cab span{margin-top:20px}
+.hitch{width:10px;height:14px;background:var(--muted);border-radius:2px}
+.trailer{width:min(240px,74vw);background:var(--deck2);border:3px solid var(--ink);border-radius:10px;padding:10px 10px 0;position:relative}
+.thead{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:8px}
+.thead b{font:900 22px/1 var(--display);letter-spacing:.04em}
+.thead b em{font-style:normal;font-size:14px;color:var(--muted);margin-left:4px}
+.rows{display:flex;align-items:center;gap:4px}
+.rows button{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:var(--surface);font-weight:800;cursor:pointer}
+.rows span{font:700 12px var(--body);color:var(--muted);min-width:44px;text-align:center}
+.side{display:flex;justify-content:space-between;font:800 11px var(--cond);letter-spacing:.2em;color:var(--muted);padding:0 6px 4px}
+.deck{display:grid;grid-template-columns:repeat(2,1fr);gap:5px}
+.slot{position:relative;aspect-ratio:1.25/1;border-radius:6px;border:2px dashed rgba(127,140,148,.55);background:var(--deck);cursor:pointer;display:grid;place-items:center;padding:0}
+.slot .rn{position:absolute;left:4px;top:2px;font:700 10px var(--body);color:var(--muted)}
+.slot.has{border:2px solid var(--ink);background:var(--surface)}
+.slot .un{position:absolute;left:0;right:0;bottom:2px;text-align:center;font:800 10px var(--cond);color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 3px}
+.doors{margin:8px -10px 0;height:16px;border-top:3px solid var(--ink);background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 20px);border-radius:0 0 7px 7px;display:grid;place-items:center;font:800 10px var(--cond);letter-spacing:.3em;color:var(--muted)}
+.tgap{height:18px;width:10px;background:var(--muted);border-radius:2px}
+.rmtrail{position:absolute;right:-14px;top:-14px;width:28px;height:28px;border-radius:50%;border:2px solid var(--ink);background:var(--surface);font-weight:900;cursor:pointer;line-height:1}
+.addtr{margin-top:12px;display:flex;gap:8px}
+.addtr button{border:1px dashed var(--muted);background:none;border-radius:10px;padding:8px 12px;font-weight:700;cursor:pointer;color:var(--muted)}
+
+.homel{display:inline-flex;align-items:center;gap:4px;margin:8px 0 0 -4px;color:var(--muted);font:500 13px var(--body);text-decoration:none;padding:4px 6px;border-radius:8px}.homel:hover{background:var(--bg2)}.homel svg{width:14px;height:14px}
+/* side view (SVG) */
+.rig{display:block!important;width:100%}
+.sideview{display:flex;flex-direction:column;gap:14px}
+.tblock{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 10px 6px}
+.tlabel{display:flex;align-items:baseline;gap:8px;margin:0 4px 4px}
+.tlabel b{font:900 26px/1 var(--display)}.tlabel span{color:var(--muted);font-size:13px;font-weight:600}
+.tlabel .rmtrail{position:static;margin-left:auto;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);background:var(--bg);font-weight:900;cursor:pointer}
+.tsvg{display:block;width:100%;height:auto}
+@media (max-width:640px){.tsvg{min-width:620px}}
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -4px;padding:0 4px}
+@media (max-width:640px){.tscroll::after{content:"Swipe to see the whole trailer →";display:block;font-size:12px;color:var(--muted);margin:2px 4px}}
+.prv .tsvg{min-width:0}
+.tb{fill:var(--deck2);stroke:var(--vis);stroke-width:6;stroke-linejoin:round;filter:drop-shadow(0 0 6px rgba(0,193,222,.35))}
+.beam{fill:var(--ink)}
+.mezb{fill:#E5282A}
+.spr{fill:var(--deck);stroke:rgba(127,140,148,.7);stroke-width:2;stroke-dasharray:6 5}
+.sp{cursor:pointer}.sp:hover .spr{stroke:var(--vis);stroke-dasharray:none}
+.sp:focus{outline:none}.sp:focus-visible .spr{stroke:var(--vis);stroke-width:4;stroke-dasharray:none}
+.sp.has .spr{fill:var(--surface);stroke:var(--ink);stroke-dasharray:none;stroke-width:3}
+.zn{font:800 15px var(--cond);letter-spacing:.14em;fill:var(--muted)}
+.cbd{fill:var(--ink)}.cwn{fill:var(--vis);opacity:.65}.cgr{fill:var(--muted)}.ctyre{fill:var(--ink);stroke:var(--muted);stroke-width:4}.chub{fill:var(--muted)}.cpl{fill:var(--muted)}
+.cft{font:800 13px var(--cond);letter-spacing:.2em;fill:var(--bg)}
+.zed rect{fill:var(--surface);stroke:var(--line);stroke-width:2}.zed text{font:900 24px var(--body);fill:var(--ink)}.zed .zcn{font:900 22px var(--display)}
+.zed g{cursor:pointer}
+.key{display:flex;gap:16px;font-size:13px;color:var(--muted);margin:2px 6px}
+.key span{display:flex;align-items:center;gap:6px}
+.kmez{width:22px;height:5px;border-radius:2px;background:#E5282A}.kbeam{width:6px;height:16px;background:var(--ink)}
+.sides{display:flex;gap:8px}
+.sd{flex:1;border:2px solid var(--line);background:var(--bg);border-radius:10px;padding:10px 6px;font-weight:700;cursor:pointer}
+.sd[aria-pressed="true"]{border-color:var(--vis);box-shadow:0 0 0 3px var(--glow)}
+.sign{display:block;flex:none}
+.more{margin-top:10px}.more summary{cursor:pointer;font-weight:700;color:var(--muted);padding:6px 2px}
+.si .sign{margin:0}
+.si .what small{display:block}.si .what .wh{color:var(--ink);font-weight:600}
+/* DG diamond */
+.dia{width:44px;height:44px;transform:rotate(45deg);border-radius:4px;display:grid;place-items:center;border:2px solid #111;box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.dia b{transform:rotate(-45deg);font:900 15px/1 var(--display);color:#111;background:#fff;border-radius:4px;padding:2px 3px 1px;box-shadow:0 0 0 1px rgba(0,0,0,.35)}
+.slot .dia{width:34px;height:34px;margin-top:-6px}.slot .dia b{font-size:13px}
+
+/* summary */
+.sum{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:6px 14px;margin-top:12px}
+.si{display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+.si:last-child{border-bottom:0}
+.si .dia{width:36px;height:36px;flex:none;margin:0 4px}.si .dia b{font-size:13px}
+.si .where{flex:none;min-width:84px;font:900 20px/1 var(--display)}
+.si .where small{display:block;font:700 12px var(--body);color:var(--muted);margin-top:3px}
+.si .what{flex:1;min-width:0}.si .what b{display:block;font:800 16px/1.15 var(--cond);text-transform:uppercase}.si .what small{color:var(--muted);font-size:13px}
+.empty{color:var(--muted);text-align:center;padding:16px 6px}
+.disclaim{font-size:12px;color:var(--muted);margin:14px 2px 0;line-height:1.4}
+
+/* picker */
+.sheet{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.55);display:flex;align-items:flex-end;justify-content:center}
+.pick{width:min(560px,100%);max-height:92vh;overflow-y:auto;background:var(--surface);border-radius:20px 20px 0 0;padding:18px 16px calc(env(safe-area-inset-bottom,0px) + 16px);position:relative}
+.pick::before{content:"";position:absolute;left:0;right:0;top:0;height:7px;border-radius:20px 20px 0 0;background:repeating-linear-gradient(-45deg,var(--warn) 0 10px,var(--ink) 10px 20px)}
+.pick h3{margin:6px 0 2px;font:900 26px var(--display)}
+.pick .sub{color:var(--muted);font-size:14px;margin-bottom:12px}
+.classes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.cl{border:2px solid var(--line);background:var(--bg);border-radius:12px;padding:12px 4px 8px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:10px}
+.cl[aria-pressed="true"]{border-color:var(--vis);box-shadow:0 0 0 3px var(--glow)}
+.cl .sign{width:72px;height:72px}
+.cl small{font:700 11px/1.15 var(--body);color:var(--muted);text-align:center}
+.pick input{width:100%;border:2px solid var(--line);background:var(--bg);border-radius:10px;padding:12px;font-size:17px;margin-top:4px}
+.pbtns{display:flex;gap:8px;margin-top:16px}
+.pbtns button{flex:1;border:0;border-radius:12px;padding:14px;font-weight:800;cursor:pointer}
+.pbtns .ok{background:var(--vis);color:var(--vis-ink)}.pbtns .clr{background:var(--bg2);color:var(--bad)}.pbtns .no{background:var(--bg2)}
+
+/* print */
+.printarea{display:none}
+@media print{
+  @page{size:A4 landscape;margin:10mm}
+  html,body{background:#fff!important;color:#000!important}
+  body>*:not(.printarea){display:none!important}
+  .printarea{display:block!important;font-family:var(--body);color:#000}
+  .pth{border-bottom:3px solid #000;padding-bottom:6px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:baseline}
+  .pth b{font:900 26px var(--display)}.pth span{font-size:11px}
+  .printarea *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .prv .ptl{font:800 13px var(--cond);margin:3mm 0 1mm}.prv .ptl b{font:900 16px var(--display)}.prv .tsvg{width:100%;max-height:62mm}.prv .tb{fill:#f2f2f2;stroke:#000;filter:none}.prv .spr{fill:#fff}.prv .sideview{gap:6mm}.prv .body{border-color:#000;box-shadow:none;background:#f2f2f2}.prv .sp{background:#fff;border-color:#bbb}.prv .rmtrail{display:none}
+  .ptab{width:100%;border-collapse:collapse;font-size:12px;margin-top:5mm;break-inside:auto}.ptab tr{break-inside:avoid}
+  .ptab th,.ptab td{border-bottom:1px solid #999;padding:4px 3px;text-align:left}
+  .ptab th{font:800 12px var(--cond);text-transform:uppercase;border-bottom:2px solid #000}
+  .pgrid{display:flex;gap:10mm;align-items:flex-start}
+  .prig{flex:none;display:flex;flex-direction:column;align-items:center;gap:3mm}
+  .ptr{border:2px solid #000;border-radius:3mm;padding:2mm;width:58mm}
+  .ptr h4{margin:0 0 2mm;font:900 15px var(--display)}
+  .pdeck{display:grid;grid-template-columns:1fr 1fr;gap:1.2mm}
+  .pslot{border:1px solid #888;border-radius:1mm;height:9mm;display:flex;align-items:center;justify-content:center;gap:1.5mm;font:800 10px var(--cond)}
+  .pslot.has{border:2px solid #000;background:#eee}
+  .pslot i{font-style:normal;font:900 12px var(--display)}
+  .plist{flex:1}
+  .plist table{width:100%;border-collapse:collapse;font-size:12px}
+  .plist th,.plist td{border-bottom:1px solid #999;padding:4px 3px;text-align:left}
+  .plist th{font:800 12px var(--cond);text-transform:uppercase;border-bottom:2px solid #000}
+  .pfoot{margin-top:6mm;font-size:10px;color:#333}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><i></i><div><div class="co">XFM</div><div class="tool">DG Trailer Plan</div><div class="depot">Xpress Freight Management<br><b>Brisbane QLD</b> depot</div></div></div>
+    <div class="clock"><span id="ctime"></span><span id="cdate"></span></div>
+  </header>
+  <a class="homel" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>XFM home</a>
+
+  <!-- START -->
+  <section id="vStart">
+    <h2>Load a trailer</h2>
+    <div class="card sign">
+      <label class="f" for="dest">Going to</label>
+      <div class="route"><span class="from">BNE</span><span class="arrow">→</span><select id="dest"></select></div>
+      <div class="row2" style="margin-top:4px">
+        <div><label class="f" for="tno">Trailer number</label><select id="tno"></select></div>
+        <div><label class="f" for="tdate">Date</label><select id="tdate"></select></div>
+      </div>
+      <label class="f">Trailer set-up</label>
+      <div class="combos" id="combos"></div>
+      <button class="go" id="start">Open trailer plan</button>
+    </div>
+    <div id="recentWrap" hidden>
+      <h2>Recent plans</h2>
+      <div class="recent" id="recent"></div>
+    </div>
+  </section>
+
+  <!-- PLAN -->
+  <section id="vPlan" hidden>
+    <div class="planbar">
+      <button class="back" id="back" aria-label="Back to trailer list"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+      <div class="ptitle"><b id="pTitle"></b><small id="pSub"></small></div>
+      <button class="pbtn" id="pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>PDF</button>
+    </div>
+    <div class="planwrap">
+      <div>
+        <p class="note">Side view, front on the left. Tap a spot to mark a DG. Red line = movable top deck.</p>
+        <div class="rig" id="rig"></div>
+        <div class="addtr" id="addtr"></div>
+      </div>
+      <div>
+        <h2>Where the DGs are</h2>
+        <div class="sum" id="sum"></div>
+        <p class="disclaim">Memory aid for loading only. Your DG paperwork is the official record. Always check it before you close up.</p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="printarea" id="printArea"></div>
+
+<script>
+/* same XFM login as the Postcode Database: no saved access code on this device = go to the login page */
+try{if(!localStorage.getItem("bf-access"))location.replace("index.html")}catch(e){}
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const DESTS=[["SYD","Sydney"],["EJS","Sydney · EJS"],["MEL","Melbourne"],["ADL","Adelaide"],["PER","Perth"],["DRW","Darwin"],["HBA","Hobart"],["CBR","Canberra"]];
+/* set-ups: key, name, sub-label, trailers front to back */
+const COMBOS=[["A","A trailer","",["A"]],["B","B trailer","",["B"]],["AB","A + B","B-double",["A","B"]],["AA","A + A","",["A","A"]],["AAB","A + A + B","Triple",["A","A","B"]],["FA","Flat A","No drop, no mezz",["FA"]],["FB","Flat B","No drop, no mezz",["FB"]],["FAB","Flat A + B","Flat B-double",["FA","FB"]]];
+const TNAME={A:"A trailer",B:"B trailer",FA:"Flat A trailer",FB:"Flat B trailer"};
+const TSHORT={A:"A",B:"B",FA:"A",FB:"B"};
+
+/* ---------- DG signs (drawn to match the placards on the floor) ---------- */
+const FLAME='<path d="M50 14c6 9 13 13 10 24 5-3 6-8 5-12 7 7 7 18-1 24H36c-9-6-8-17-1-23 0 5 2 8 6 10-4-9 0-17 9-23z"/><rect x="34" y="44" width="32" height="3"/>';
+const SYM={
+ flame:c=>`<g fill="${c}">${FLAME}</g>`,
+ burst:c=>`<g fill="${c}"><polygon points="50,14 54,28 66,18 60,32 76,30 62,38 74,46 58,42 56,50 50,40 44,50 42,42 26,46 38,38 24,30 40,32 34,18 46,28"/></g>`,
+ cyl:c=>`<g fill="${c}"><rect x="30" y="31" width="38" height="10" rx="5" transform="rotate(-25 50 36)"/><rect x="64" y="22" width="6" height="8" transform="rotate(-25 67 26)"/></g>`,
+ skull:c=>`<g fill="${c}" stroke="${c}"><circle cx="50" cy="28" r="9"/><rect x="45" y="33" width="10" height="7" rx="2"/><path d="M34 36 66 46M66 36 34 46" stroke-width="4" stroke-linecap="round"/></g><circle cx="46" cy="27" r="2.3" fill="#fff"/><circle cx="54" cy="27" r="2.3" fill="#fff"/>`,
+ bio:c=>`<g fill="none" stroke="${c}" stroke-width="3.5"><circle cx="50" cy="22" r="8"/><circle cx="42" cy="36" r="8"/><circle cx="58" cy="36" r="8"/></g><circle cx="50" cy="31" r="3" fill="${c}"/>`,
+ corr:c=>`<g fill="${c}"><rect x="30" y="18" width="5" height="12" transform="rotate(-20 32 24)"/><rect x="56" y="18" width="5" height="12" transform="rotate(-20 58 24)"/><path d="M33 31c2 3 2 5 0 6-2-1-2-3 0-6zM59 31c2 3 2 5 0 6-2-1-2-3 0-6z"/><rect x="24" y="40" width="20" height="5"/><path d="M56 40h20v4c-3 2-17 2-20 0z"/></g>`,
+ trefoil:c=>`<g fill="${c}"><circle cx="50" cy="34" r="3"/><path d="M50 30 44 18a14 14 0 0 1 12 0z"/><path d="M53.5 36 66 36a14 14 0 0 1-6 10z"/><path d="M46.5 36 34 36a14 14 0 0 0 6 10z"/></g>`,
+ ring:c=>`<g fill="${c}">${FLAME}</g><circle cx="50" cy="44" r="7" fill="none" stroke="${c}" stroke-width="3"/>`,
+ batt:c=>`<g fill="${c}"><rect x="30" y="56" width="9" height="20" rx="2"/><rect x="33" y="54" width="3" height="3"/><rect x="40" y="60" width="7" height="16" rx="2"/><rect x="42.5" y="58" width="2.5" height="3"/><rect x="48" y="62" width="9" height="14" rx="1"/><rect x="50" y="60" width="2" height="3"/><rect x="56" y="64" width="16" height="12" rx="6"/><path d="M62 52c2 3 4 4 3 7 2-1 2-3 2-4 2 2 2 5 0 7h-7c-2-2-2-5 0-7 0 2 1 3 2 3-1-2 0-4 0-6z"/><path d="M63 66l-2 4h3l-2 5" fill="none" stroke="#fff" stroke-width="1.5"/></g>`,
+ stripes:c=>`<g fill="${c}"><path d="M50 4 54 8 50 12 46 8zM40 14 48 22 44 26 36 18zM60 14 64 18 56 26 52 22z"/></g>`
+};
+/* [class, short name, sign words, top colour, bottom colour, text colour, symbol, symbol colour, number shown] */
+const DG=[
+ ["8","Corrosive",["CORROSIVE"],"#FFFFFF","#111111","#FFFFFF","corr","#111","8"],
+ ["2.1","Flammable gas",["FLAMMABLE","GAS"],"#E31E24","#E31E24","#FFFFFF","flame","#FFF","2"],
+ ["1","Explosive",["EXPLOSIVE"],"#F7941D","#F7941D","#111111","burst","#111","1"],
+ ["3","Flammable liquid",["FLAMMABLE","LIQUID"],"#E31E24","#E31E24","#111111","flame","#111","3"],
+ ["DG","Dangerous goods (mixed)",["DANGEROUS","GOODS"],"stripes","stripes","#FFFFFF","","",""],
+ ["5.2","Organic peroxide",["ORGANIC","PEROXIDE"],"#E31E24","#FFD200","#111111","flame","#111","5.2"],
+ ["6.1","Toxic",["TOXIC"],"#FFFFFF","#FFFFFF","#111111","skull","#111","6"],
+ ["2.2","Non-flammable, non-toxic gas",["NON-FLAMMABLE","NON-TOXIC GAS"],"#009A44","#009A44","#FFFFFF","cyl","#FFF","2"],
+ ["6.2","Infectious substance",["INFECTIOUS","SUBSTANCE"],"#FFFFFF","#FFFFFF","#111111","bio","#111","6"],
+ ["9A","Lithium batteries",[],"bstripes","#FFFFFF","#111111","batt","#111","9"],
+ ["2.3","Toxic gas",["TOXIC GAS"],"#FFFFFF","#FFFFFF","#111111","skull","#111","2"],
+ ["4.1","Flammable solid",["FLAMMABLE","SOLID"],"rstripes","rstripes","#111111","flame","#111","4"],
+ ["4.2","Spontaneously combustible",["SPONTANEOUSLY","COMBUSTIBLE"],"#FFFFFF","#E31E24","#111111","flame","#111","4"],
+ ["4.3","Dangerous when wet",["DANGEROUS","WHEN WET"],"#1F5FC1","#1F5FC1","#FFFFFF","flame","#FFF","4"],
+ ["5.1","Oxidising agent",["OXIDIZING","AGENT"],"#FFD200","#FFD200","#111111","ring","#111","5.1"],
+ ["7","Radioactive",["RADIOACTIVE"],"#FFD200","#FFFFFF","#111111","trefoil","#111","7"],
+ ["9","Miscellaneous",["MISCELLANEOUS"],"bstripes","#FFFFFF","#111111","","","9"]
+];
+/* most common at the depot first, in this order; the rest go under "Other classes" */
+const ORDER=["2.1","8","2.2","9A","3"];
+DG.sort((a,b)=>{const ia=ORDER.indexOf(a[0]),ib=ORDER.indexOf(b[0]);return (ia<0?99:ia)-(ib<0?99:ib)});
+const COMMON=ORDER.length; /* the first nine are the signs used most at the depot */
+const dgOf=c=>DG.find(x=>x[0]===c);
+let sid=0;
+/* full = the whole placard with words; small = colours + number only, for the trailer diagram */
+function sign(c,size,small){
+  const d=dgOf(c);if(!d)return "";const id="s"+(sid++);
+  const clip=`<clipPath id="${id}"><polygon points="50,3 97,50 50,97 3,50"/></clipPath>`;
+  let fill="";
+  const band=(col)=>col==="stripes"?`<rect x="0" y="0" width="100" height="100" fill="#F7941D"/>${[22,40,58,76].map(y=>`<rect x="0" y="${y}" width="100" height="9" fill="#111"/>`).join("")}`
+    :col==="rstripes"?`<rect width="100" height="100" fill="#fff"/>${[0,14,28,42,56,70,84].map(x=>`<rect x="${x}" y="0" width="7" height="100" fill="#E31E24"/>`).join("")}`
+    :col==="bstripes"?`<rect width="100" height="50" fill="#fff"/>${[0,12,24,36,48,60,72,84,96].map(x=>`<rect x="${x}" y="0" width="6" height="50" fill="#111"/>`).join("")}`:"";
+  if(d[3].includes("stripes"))fill+=band(d[3]);else fill+=`<rect width="100" height="50" fill="${d[3]}"/>`;
+  if(d[4]!==d[3]||!d[4].includes("stripes")){if(!d[4].includes("stripes"))fill+=`<rect y="50" width="100" height="50" fill="${d[4]}"/>`}
+  let inner=`<g clip-path="url(#${id})">${fill}</g><polygon points="50,3 97,50 50,97 3,50" fill="none" stroke="#111" stroke-width="2.5"/><polygon points="50,9 91,50 50,91 9,50" fill="none" stroke="${d[5]==="#FFFFFF"&&d[3]!=="#FFFFFF"?"#fff":"#111"}" stroke-width="1.2" opacity=".7"/>`;
+  if(c==="DG"){
+    inner+=small?`<rect x="20" y="40" width="60" height="20" rx="2" fill="#111"/><text x="50" y="55" text-anchor="middle" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="800" font-size="16" fill="#fff">DG</text>`
+      :`<text x="50" y="38" text-anchor="middle" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="800" font-size="11" fill="#fff">DANGEROUS</text><text x="50" y="74" text-anchor="middle" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="800" font-size="11" fill="#fff">GOODS</text>`;
+  }else if(small){
+    inner+=`<rect x="${d[8].length>1?28:34}" y="38" width="${d[8].length>1?44:32}" height="24" rx="3" fill="#fff" stroke="#111" stroke-width="1.5"/><text x="50" y="57" text-anchor="middle" font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="20" fill="#111">${esc(c)}</text>`;
+  }else{
+    inner+=d[6]?SYM[d[6]](d[7]):"";
+    const lines=d[2],fs=lines.some(l=>l.length>11)?7.2:9.5;
+    lines.forEach((l,i)=>inner+=`<text x="50" y="${(lines.length>1?58:63)+i*10}" text-anchor="middle" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="800" font-size="${fs}" fill="${c==="8"?"#fff":d[5]}">${esc(l)}</text>`);
+    if(c==="9A"||c==="9")inner+=`<rect x="44" y="91" width="12" height="1.8" fill="#111"/>`;
+    inner+=`<text x="50" y="${d[8].length>1?88:89}" text-anchor="middle" font-family="Barlow,Arial,sans-serif" font-weight="800" font-size="${d[8].length>1?11:13}" fill="${c==="8"||d[4]==="#111111"?"#fff":d[5]}">${esc(d[8])}</text>`;
+  }
+  return `<svg class="sign" viewBox="0 0 100 100" width="${size}" height="${size}" role="img" aria-label="${esc(d[1])}${c==="DG"?"":" class "+c}"><defs>${clip}</defs>${inner}</svg>`;
+}
+function dia(c){return sign(c,40,true)}
+
+/* ---------- storage ---------- */
+const PK="dg-plans";
+let P={};try{P=JSON.parse(localStorage.getItem(PK)||"{}")}catch(e){}
+function save(){try{const ks=Object.keys(P).sort((a,b)=>(P[b].at||0)-(P[a].at||0));ks.slice(40).forEach(k=>delete P[k]);localStorage.setItem(PK,JSON.stringify(P))}catch(e){}}
+
+/* ---------- clock + dates (Brisbane) ---------- */
+const TZ="Australia/Brisbane";
+const fT=new Intl.DateTimeFormat("en-AU",{timeZone:TZ,hour:"numeric",minute:"2-digit",hour12:true});
+const fD=new Intl.DateTimeFormat("en-AU",{timeZone:TZ,weekday:"short",day:"numeric",month:"short"});
+const fISO=new Intl.DateTimeFormat("en-CA",{timeZone:TZ});
+function tick(){const d=new Date();$("ctime").textContent=fT.format(d).replace(/\s?([ap])\.?m\.?/i,(m,a)=>" "+a.toUpperCase()+"M");$("cdate").textContent=fD.format(d).replace(",","")}
+tick();setInterval(tick,30000);
+
+/* ---------- trailer geometry (side view, front on the left) ----------
+   each zone: x range, roof y, floor y, mez y (or null) and pallet spots along the length */
+const GEO={
+  A:{w:1000,zones:[{n:"Front",x0:120,x1:480,top:20,floor:170,mez:null,cols:3},{n:"Drop",x0:480,x1:985,top:20,floor:236,mez:122,cols:4}],axles:[860,905,950],cab:true},
+  B:{w:1000,zones:[{n:"Front",x0:30,x1:320,top:30,floor:178,mez:null,cols:3},{n:"Drop",x0:320,x1:690,top:30,floor:236,mez:126,cols:4},{n:"Rear",x0:690,x1:985,top:30,floor:190,mez:108,cols:4}],axles:[800,850,900]},
+  FA:{w:1000,zones:[{n:"Deck",x0:120,x1:985,top:40,floor:200,mez:null,cols:9}],axles:[860,905,950],cab:true},
+  FB:{w:1000,zones:[{n:"Deck",x0:30,x1:985,top:40,floor:200,mez:null,cols:11}],axles:[860,905,950]}
+};
+const newTrailer=t=>({type:t,cols:GEO[t].zones.map(z=>z.cols),slots:{}});
+
+/* ---------- start screen ---------- */
+let combo="AB";
+$("dest").innerHTML=DESTS.map(([k,n])=>`<option value="${k}">${n}</option>`).join("");
+$("tno").innerHTML=[1,2,3,4,5,6].map(n=>`<option value="${n}">#${n}</option>`).join("");
+(function(){const now=Date.now();$("tdate").innerHTML=[0,-1,1].map(o=>{const d=new Date(now+o*864e5);return `<option value="${fISO.format(d)}">${o===0?"Today":o<0?"Yest.":"Tmrw"} ${new Intl.DateTimeFormat("en-AU",{timeZone:TZ,day:"numeric",month:"short"}).format(d)}</option>`}).join("")})();
+function drawCombos(){
+  const icon=ts=>`<span class="mini"><span class="pm"></span>${ts.map(t=>`<span class="tr ${t.toLowerCase()}"></span>`).join("")}</span>`;
+  $("combos").innerHTML=COMBOS.map(([k,n,s,ts])=>`<button class="combo" data-k="${k}" aria-pressed="${k===combo}">${icon(ts)}<b>${n}</b>${s?`<small>${s}</small>`:""}</button>`).join("");
+  $("combos").querySelectorAll(".combo").forEach(b=>b.onclick=()=>{combo=b.dataset.k;drawCombos()});
+}
+drawCombos();
+$("dest").onchange=()=>{if($("dest").value==="EJS"){combo="FAB";drawCombos()}};
+const pid=(d,n,dt)=>`${dt}|${d}|${n}`;
+$("start").onclick=()=>{
+  const d=$("dest").value,n=$("tno").value,dt=$("tdate").value,id=pid(d,n,dt);
+  const types=(COMBOS.find(c=>c[0]===combo)||COMBOS[2])[3];
+  if(!P[id]||!P[id].trailers.every(t=>t.cols&&GEO[t.type]))P[id]={dest:d,num:+n,date:dt,trailers:types.map(newTrailer),at:Date.now()};
+  save();openPlan(id);
+};
+function dname(k){return (DESTS.find(x=>x[0]===k)||[k,k])[1]}
+function dgCount(p){return p.trailers.reduce((s,t)=>s+Object.keys(t.slots||{}).length,0)}
+function setName(p){return p.trailers.map(t=>TNAME[t.type].replace(" trailer","")).join(" + ")}
+function drawRecent(){
+  const ks=Object.keys(P).filter(k=>P[k].trailers&&P[k].trailers.every(t=>t.cols&&GEO[t.type])).sort((a,b)=>(P[b].at||0)-(P[a].at||0)).slice(0,12);
+  $("recentWrap").hidden=!ks.length;
+  $("recent").innerHTML=ks.map(k=>{const p=P[k],n=dgCount(p);return `<button class="rp" data-id="${esc(k)}"><span class="badge">${esc(p.dest)}</span><span class="n"><b>BNE → ${esc(dname(p.dest))} #${p.num}</b><small>${esc(fD.format(new Date(p.date+"T12:00:00")).replace(",",""))} · ${esc(setName(p))}</small></span><span class="dgc">${n} DG${n===1?"":"s"}</span></button>`}).join("");
+  $("recent").querySelectorAll(".rp").forEach(b=>b.onclick=()=>openPlan(b.dataset.id));
+}
+
+/* ---------- plan screen ---------- */
+let cur=null,editLayout=false;
+function openPlan(id){cur=id;$("vStart").hidden=true;$("vPlan").hidden=false;drawPlan();window.scrollTo({top:0})}
+$("back").onclick=()=>{cur=null;$("vPlan").hidden=true;$("vStart").hidden=false;drawRecent();window.scrollTo({top:0})};
+const LEV={0:"Floor",1:"Top deck",2:"Bottom deck"};
+function tLabel(t,ti,p){const s=TSHORT[t.type],same=p.trailers.filter(x=>TSHORT[x.type]===s).length>1;const idx=p.trailers.slice(0,ti+1).filter(x=>TSHORT[x.type]===s).length;return s+(same?idx:"")}
+function spotName(t,key){const [z,l,c]=key.split("-").map(Number),zone=GEO[t.type].zones[z];return {zone:zone?zone.n:"?",lev:LEV[l],col:c+1}}
+
+/* one trailer, drawn as an SVG side view with tappable pallet spots */
+function trailerSVG(t,ti,p,forPrint){
+  const g=GEO[t.type],Z=g.zones;let out="";
+  /* body outline: roof line, then each zone's floor with steps between */
+  let path=`M${Z[0].x0} ${Z[0].top}`;Z.forEach(z=>path+=` L${z.x1} ${z.top}`);
+  const last=Z[Z.length-1];path+=` L${last.x1} ${last.floor}`;
+  for(let i=Z.length-1;i>=0;i--){const z=Z[i];path+=` L${z.x1} ${z.floor} L${z.x0} ${z.floor}`;if(i>0)path+=` L${z.x0} ${Z[i-1].floor}`}
+  path+=` Z`;
+  out+=`<path d="${path}" class="tb"/>`;
+  /* cab on the A trailer, coupling on the others */
+  if(g.cab)out+=`<g class="cab"><path d="M8 236V120c0-14 6-26 18-34l26-18h48c8 0 12 6 12 12v156z" class="cbd"/><path d="M30 92h52v40H22v-20z" class="cwn"/><rect x="2" y="214" width="112" height="12" rx="3" class="cgr"/><circle cx="34" cy="244" r="14" class="ctyre"/><circle cx="34" cy="244" r="5" class="chub"/><circle cx="90" cy="244" r="14" class="ctyre"/><circle cx="90" cy="244" r="5" class="chub"/><text x="60" y="186" text-anchor="middle" class="cft">FRONT</text></g>`;
+  else out+=`<rect x="0" y="${Z[0].floor-6}" width="30" height="8" rx="3" class="cpl"/>`;
+  /* axles */
+  g.axles.forEach(x=>out+=`<circle cx="${x}" cy="248" r="16" class="ctyre"/><circle cx="${x}" cy="248" r="6" class="chub"/>`);
+  /* zones: beams, mez decks, spots */
+  Z.forEach((z,zi)=>{
+    const cols=t.cols[zi],pad=8,inner=z.x1-z.x0-pad*2;
+    if(zi>0)out+=`<rect x="${z.x0-7}" y="${Math.min(z.top,Z[zi-1].top)}" width="14" height="${Math.max(z.floor,Z[zi-1].floor)-Math.min(z.top,Z[zi-1].top)-(z.floor<Z[zi-1].floor?Z[zi-1].floor-z.floor:0)}" class="beam"/>`;
+    const levels=z.mez?[[1,z.top+pad,z.mez-6],[2,z.mez+6,z.floor-pad]]:[[0,z.top+pad,z.floor-pad]];
+    if(z.mez)out+=`<rect x="${z.x0+2}" y="${z.mez-4}" width="${z.x1-z.x0-4}" height="8" rx="2" class="mezb"/>`;
+    levels.forEach(([l,y0,y1])=>{
+      const h=y1-y0,cw=inner/cols;
+      for(let c=0;c<cols;c++){
+        const k=`${zi}-${l}-${c}`,s=t.slots[k],x=z.x0+pad+c*cw;
+        const sz=Math.min(cw-6,h-6,92);
+        out+=`<g class="sp${s?" has":""}" data-t="${ti}" data-s="${k}" tabindex="0" role="button" aria-label="${tLabel(t,ti,p)} ${z.n} ${LEV[l]} spot ${c+1}${s?`, ${dgOf(s.cls)?.[1]||""}`:", empty"}"><rect x="${x+3}" y="${y0}" width="${cw-6}" height="${h}" rx="5" class="spr"/>${s?`<g transform="translate(${x+cw/2-sz/2} ${y0+h/2-sz/2}) scale(${sz/100})">${sign(s.cls,100,true).replace(/^<svg[^>]*>/,"").replace(/<\/svg>$/,"")}</g>`:""}</g>`;
+      }
+    });
+    out+=`<text x="${(z.x0+z.x1)/2}" y="${(z.mez?z.floor:z.floor)+18}" text-anchor="middle" class="zn">${z.n.toUpperCase()}</text>`;
+    if(editLayout&&!forPrint)out+=`<g class="zed"><g data-zc="${ti}|${zi}|-1" role="button" aria-label="Fewer spots"><rect x="${(z.x0+z.x1)/2-70}" y="${z.top+6}" width="40" height="34" rx="8"/><text x="${(z.x0+z.x1)/2-50}" y="${z.top+30}" text-anchor="middle">−</text></g><text x="${(z.x0+z.x1)/2}" y="${z.top+30}" text-anchor="middle" class="zcn">${cols}</text><g data-zc="${ti}|${zi}|1" role="button" aria-label="More spots"><rect x="${(z.x0+z.x1)/2+30}" y="${z.top+6}" width="40" height="34" rx="8"/><text x="${(z.x0+z.x1)/2+50}" y="${z.top+30}" text-anchor="middle">+</text></g></g>`;
+  });
+  return `<svg class="tsvg" viewBox="0 0 ${g.w} 270" preserveAspectRatio="xMidYMid meet">${out}</svg>`;
+}
+function drawPlan(){
+  const p=P[cur];if(!p)return;
+  $("pTitle").textContent=`BNE → ${dname(p.dest).toUpperCase()} #${p.num}`;
+  $("pSub").textContent=`${fD.format(new Date(p.date+"T12:00:00")).replace(",","")} · ${p.trailers.map(t=>TNAME[t.type]).join(" + ")}`;
+  $("rig").innerHTML=`<div class="sideview">${p.trailers.map((t,ti)=>`<div class="tblock"><div class="tlabel"><b>${tLabel(t,ti,p)}</b><span>${TNAME[t.type]}</span>${p.trailers.length>1?`<button class="rmtrail" data-rm="${ti}" aria-label="Remove this trailer">×</button>`:""}</div><div class="tscroll">${trailerSVG(t,ti,p)}</div></div>`).join("")}${p.trailers.some(t=>t.type[0]!=="F")?`<div class="key"><span><i class="kmez"></i>Movable top deck</span><span><i class="kbeam"></i>Support beam</span></div>`:""}</div>`;
+  $("addtr").innerHTML=`${p.trailers.length<4?(p.trailers.some(t=>t.type[0]==="F")?`<button data-add="FA">+ Flat A</button><button data-add="FB">+ Flat B</button>`:`<button data-add="A">+ A trailer</button><button data-add="B">+ B trailer</button>`):""}<button id="edLay">${editLayout?"Done adjusting":"Adjust spots"}</button>`;
+  const open=el=>openPick(+el.dataset.t,el.dataset.s);
+  $("rig").querySelectorAll(".sp").forEach(g=>{g.onclick=()=>open(g);g.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open(g)}}});
+  $("rig").querySelectorAll("[data-zc]").forEach(b=>b.onclick=e=>{e.stopPropagation();const [ti,zi,d]=b.dataset.zc.split("|").map(Number);const t=p.trailers[ti];t.cols[zi]=Math.max(1,Math.min(8,t.cols[zi]+d));Object.keys(t.slots).forEach(k=>{const [a,,c]=k.split("-").map(Number);if(a===zi&&c>=t.cols[zi])delete t.slots[k]});p.at=Date.now();save();drawPlan()});
+  $("rig").querySelectorAll("[data-rm]").forEach(b=>b.onclick=()=>{const ti=+b.dataset.rm,t=p.trailers[ti];const go=()=>{p.trailers.splice(ti,1);p.at=Date.now();save();drawPlan()};if(Object.keys(t.slots).length)confirmBox(`Remove the ${TNAME[t.type]}? Its DG marks will be lost.`,go);else go()});
+  $("addtr").querySelectorAll("[data-add]").forEach(b=>b.onclick=()=>{p.trailers.push(newTrailer(b.dataset.add));p.at=Date.now();save();drawPlan()});
+  $("edLay").onclick=()=>{editLayout=!editLayout;drawPlan()};
+  drawSum();
+}
+function listDGs(p){const out=[];p.trailers.forEach((t,ti)=>{Object.entries(t.slots).forEach(([k,s])=>{const [z,l,c]=k.split("-").map(Number);out.push({ti,t,z,l,c,k,s})})});out.sort((a,b)=>a.ti-b.ti||a.z-b.z||a.c-b.c||a.l-b.l);return out}
+function where(x,p){const n=spotName(x.t,x.k);return {big:`${tLabel(x.t,x.ti,p)} · ${n.zone}`,small:`${n.lev}, spot ${n.col} from front${x.s.side?` · ${x.s.side}`:""}`}}
+function drawSum(){
+  const p=P[cur],L=listDGs(p);
+  $("sum").innerHTML=L.length?L.map(x=>{const d=dgOf(x.s.cls),w=where(x,p);return `<div class="si">${sign(x.s.cls,58)}<span class="what"><b>${esc(w.big)}</b><small class="wh">${esc(w.small)}</small><small>${esc(d?d[1]:"")}${x.s.un?` · ${esc(x.s.un)}`:""}${x.s.note?` · ${esc(x.s.note)}`:""}</small></span></div>`}).join(""):`<div class="empty">No DGs marked yet. Tap a spot on the trailer to add one.</div>`;
+}
+
+/* ---------- DG picker ---------- */
+function openPick(ti,key){
+  const p=P[cur],t=p.trailers[ti],cur0=t.slots[key]||{};let cls=cur0.cls||"",side=cur0.side||"";
+  const n=spotName(t,key);
+  const card=d=>`<button class="cl" data-c="${d[0]}" aria-pressed="${d[0]===cls}">${sign(d[0],66)}<small>${esc(d[1])}</small></button>`;
+  const w=document.createElement("div");w.className="sheet";
+  w.innerHTML=`<div class="pick" role="dialog" aria-modal="true" aria-labelledby="pkT"><h3 id="pkT">${tLabel(t,ti,p)} · ${n.zone} · ${n.lev}</h3><div class="sub">Spot ${n.col} from the front. Pick the sign on this pallet.</div>
+    <div class="classes">${DG.slice(0,COMMON).map(card).join("")}</div>
+    <details class="more"><summary>Other classes</summary><div class="classes">${DG.slice(COMMON).map(card).join("")}</div></details>
+    <label class="f" style="margin-top:14px">Which side (optional)</label><div class="sides">${["Left side","Right side","Across"].map(s=>`<button class="sd" data-sd="${s}" aria-pressed="${s===side}">${s}</button>`).join("")}</div>
+    <label class="f" for="pkUN" style="margin-top:14px">UN number (optional)</label><input id="pkUN" inputmode="numeric" placeholder="e.g. 1263" value="${esc((cur0.un||"").replace(/^UN/,""))}">
+    <label class="f" for="pkNote">Note (optional)</label><input id="pkNote" placeholder="e.g. paint, 4 drums, customer" value="${esc(cur0.note||"")}">
+    <div class="pbtns">${t.slots[key]?`<button class="clr" id="pkClr">Clear spot</button>`:`<button class="no" id="pkNo">Cancel</button>`}<button class="ok" id="pkOk">Save</button></div></div>`;
+  document.body.appendChild(w);
+  if(cls&&DG.findIndex(d=>d[0]===cls)>=COMMON)w.querySelector(".more").open=true;
+  const close=()=>w.remove();
+  w.onclick=e=>{if(e.target===w)close()};
+  w.addEventListener("keydown",e=>{if(e.key==="Escape")close()});
+  w.querySelectorAll(".cl").forEach(b=>b.onclick=()=>{cls=b.dataset.c;w.querySelectorAll(".cl").forEach(x=>x.setAttribute("aria-pressed",x.dataset.c===cls))});
+  w.querySelectorAll(".sd").forEach(b=>b.onclick=()=>{side=side===b.dataset.sd?"":b.dataset.sd;w.querySelectorAll(".sd").forEach(x=>x.setAttribute("aria-pressed",x.dataset.sd===side))});
+  if(w.querySelector("#pkNo"))w.querySelector("#pkNo").onclick=close;
+  if(w.querySelector("#pkClr"))w.querySelector("#pkClr").onclick=()=>{delete t.slots[key];p.at=Date.now();save();close();drawPlan()};
+  w.querySelector("#pkOk").onclick=()=>{if(!cls){w.querySelector(".sub").innerHTML="<b style='color:var(--bad)'>Pick a sign first.</b>";return}
+    const un=w.querySelector("#pkUN").value.replace(/\D/g,"").slice(0,4);t.slots[key]={cls,side,un:un?"UN"+un:"",note:w.querySelector("#pkNote").value.trim().slice(0,60)};p.at=Date.now();save();close();drawPlan()};
+}
+function confirmBox(msg,yes){
+  const w=document.createElement("div");w.className="sheet";w.style.alignItems="center";
+  w.innerHTML=`<div class="pick" style="border-radius:18px;max-width:380px"><h3 style="font-size:22px">Are you sure?</h3><div class="sub">${esc(msg)}</div><div class="pbtns"><button class="no">Cancel</button><button class="clr">Remove</button></div></div>`;
+  document.body.appendChild(w);w.querySelector(".no").onclick=()=>w.remove();w.querySelector(".clr").onclick=()=>{w.remove();yes()};w.onclick=e=>{if(e.target===w)w.remove()};
+}
+
+/* ---------- PDF ---------- */
+/* ---------- PDF: drawn in the page, then saved as a real .pdf file ---------- */
+const PDFCSS=`.tb{fill:#EEF1F2;stroke:#00A3BD;stroke-width:6;stroke-linejoin:round}.beam{fill:#161819}.mezb{fill:#E5282A}.spr{fill:#fff;stroke:#9AA3A8;stroke-width:2;stroke-dasharray:6 5}.sp.has .spr{stroke:#161819;stroke-dasharray:none;stroke-width:3}.zn{font:800 15px Arial Narrow,Arial,sans-serif;letter-spacing:2px;fill:#5B6266}.cbd{fill:#161819}.cwn{fill:#00C1DE;opacity:.65}.cgr{fill:#9AA3A8}.ctyre{fill:#161819;stroke:#9AA3A8;stroke-width:4}.chub{fill:#9AA3A8}.cpl{fill:#9AA3A8}.cft{font:800 13px Arial,sans-serif;letter-spacing:2px;fill:#fff}`;
+const W=1123,H=794;
+function inner(svg){return svg.replace(/^<svg[^>]*>/,"").replace(/<\/svg>$/,"")}
+function pdfPages(p){
+  const L=listDGs(p),pages=[];
+  const title=`BNE → ${dname(p.dest).toUpperCase()} #${p.num} · DG trailer plan`;
+  const sub=`${fD.format(new Date(p.date+"T12:00:00")).replace(",","")} · ${p.trailers.map(t=>TNAME[t.type]).join(" + ")} · XFM Brisbane QLD depot`;
+  const head=(pg,n)=>`<rect width="${W}" height="${H}" fill="#fff"/><text x="32" y="44" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="26" fill="#161819">${esc(title)}</text><text x="32" y="66" font-family="Arial,sans-serif" font-size="13" fill="#5B6266">${esc(sub)}</text><rect x="32" y="76" width="${W-64}" height="3" fill="#161819"/><text x="${W-32}" y="${H-18}" text-anchor="end" font-family="Arial,sans-serif" font-size="11" fill="#5B6266">Memory aid for loading only. The DG paperwork is the official record.${n>1?`   Page ${pg} of ${n}`:""}</text>`;
+  /* left: trailers, right: DG list */
+  const tw=650,th=tw*270/1000;
+  let rig="";p.trailers.forEach((t,ti)=>{const y=96+ti*(th+26);rig+=`<text x="32" y="${y+14}" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="16" fill="#161819">${esc(tLabel(t,ti,p))}  <tspan font-family="Arial,sans-serif" font-weight="400" font-size="12" fill="#5B6266">${esc(TNAME[t.type])}</tspan></text><svg x="32" y="${y+18}" width="${tw}" height="${th}" viewBox="0 0 1000 270">${inner(trailerSVG(t,ti,p,true))}</svg>`});
+  const rowH=46,x0=710,listTop=110,per1=Math.floor((H-60-listTop)/rowH),perN=Math.floor((H-60-100)/rowH);
+  const row=(x,i,y)=>{const d=dgOf(x.s.cls),w=where(x,p);return `<svg x="${x0}" y="${y}" width="40" height="40" viewBox="0 0 100 100">${inner(sign(x.s.cls,100,true))}</svg><text x="${x0+50}" y="${y+16}" font-family="Arial,sans-serif" font-weight="700" font-size="14" fill="#161819">${esc(w.big)} · ${esc(d?d[1]:"")}</text><text x="${x0+50}" y="${y+34}" font-family="Arial,sans-serif" font-size="12" fill="#5B6266">${esc(w.small)}${x.s.un?" · "+esc(x.s.un):""}${x.s.note?" · "+esc(x.s.note):""}</text><rect x="${x0}" y="${y+rowH-4}" width="${W-32-x0}" height="1" fill="#CDD3D6"/>`};
+  const listHead=y=>`<text x="${x0}" y="${y}" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="18" fill="#161819">Where the DGs are (${L.length})</text>`;
+  let first=L.slice(0,per1),rest=L.slice(per1);const n=1+Math.ceil(rest.length/perN);
+  let body=rig+listHead(100)+(first.length?first.map((x,i)=>row(x,i,listTop+i*rowH)).join(""):`<text x="${x0}" y="${listTop+20}" font-family="Arial,sans-serif" font-size="14" fill="#5B6266">No DGs marked.</text>`);
+  pages.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><style>${PDFCSS}</style>${head(1,n)}${body}</svg>`);
+  for(let k=0;k<rest.length;k+=perN){const chunk=rest.slice(k,k+perN);pages.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><style>${PDFCSS}</style>${head(pages.length+1,n)}${listHead(110)}${chunk.map((x,i)=>row(x,i,120+i*rowH)).join("").replaceAll(`x="${x0}`,`x="32`).replaceAll(`x="${x0+50}`,`x="82`)}</svg>`)}
+  return pages;
+}
+function raster(svg){return new Promise((res,rej)=>{const img=new Image();img.onload=()=>{const c=document.createElement("canvas");c.width=W*2;c.height=H*2;const g=c.getContext("2d");g.fillStyle="#fff";g.fillRect(0,0,c.width,c.height);g.drawImage(img,0,0,c.width,c.height);res(c.toDataURL("image/jpeg",.92))};img.onerror=rej;img.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svg)})}
+let jsPDFp=null;
+function loadJsPDF(){return jsPDFp=jsPDFp||new Promise((res,rej)=>{if(window.jspdf)return res(window.jspdf.jsPDF);const s=document.createElement("script");s.src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";s.onload=()=>window.jspdf?res(window.jspdf.jsPDF):rej(new Error("no jspdf"));s.onerror=rej;document.head.appendChild(s)})}
+let dlCap;(async()=>{try{if(window.claude)dlCap=await claude.use("downloads")}catch(e){}})();
+function pdfMsg(t,bad){let m=$("pdfMsg");if(!m){m=document.createElement("p");m.id="pdfMsg";m.className="note";$("vPlan").querySelector(".planbar").after(m)}m.textContent=t;m.style.color=bad?"var(--bad)":"";clearTimeout(m._t);if(t)m._t=setTimeout(()=>m.textContent="",6000)}
+$("pdf").onclick=async()=>{
+  const p=P[cur],b=$("pdf"),lbl=b.innerHTML;if(b.disabled)return;
+  b.disabled=true;b.innerHTML=`<span class="spin"></span>Making…`;pdfMsg("");
+  try{
+    const JsPDF=await loadJsPDF();
+    const pages=pdfPages(p),doc=new JsPDF({orientation:"landscape",unit:"mm",format:"a4"});
+    for(let i=0;i<pages.length;i++){const img=await raster(pages[i]);if(i)doc.addPage();doc.addImage(img,"JPEG",0,0,297,210)}
+    const name=`DG-plan_BNE-${p.dest}-${p.num}_${p.date}.pdf`,blob=doc.output("blob");
+    if(dlCap){
+      try{await dlCap.save({filename:name,data:blob});pdfMsg("PDF saved.")}
+      catch(e){pdfMsg(e&&e.code==="declined"?"Download cancelled.":"Couldn’t save the PDF here. Try again in a moment.",e&&e.code!=="declined")}
+    }else{
+      const u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),30000);pdfMsg("PDF downloaded.");
+    }
+  }catch(e){pdfMsg("Couldn’t make the PDF. Check your connection and try again.",true)}
+  b.disabled=false;b.innerHTML=lbl;
+};
+
+/* ---------- view mode from screen size ---------- */
+(function(){function apply(){document.documentElement.classList.toggle("desk",innerWidth>=900)}apply();addEventListener("resize",apply)})();
+drawRecent();
+</script>
+</body>
+</html>
